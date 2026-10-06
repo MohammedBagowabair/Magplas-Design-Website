@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { @apply bg-concrete text-graphite font-sans antialiased; overflow-x: hidden; }
+::selection { background: #FF5B1F; color: #fff; }
+section[id] { scroll-margin-top: 68px; }
+img { max-width: 100%; height: auto; }
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #FF5B1F; outline-offset: 3px; }
+
+.tap { min-height: 44px; min-width: 44px; }
+.xp { font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; }
+.mono { @apply font-mono uppercase; letter-spacing: 0.08em; }
+.grid-bg {
+  background-image: linear-gradient(rgba(26,28,30,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(26,28,30,.055) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.grid-bg-dark {
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.h2 { font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: .95; font-size: clamp(1.9rem, 6vw, 4rem); }
+.kick { @apply font-mono inline-flex items-center gap-2 text-[11px] text-steel uppercase; letter-spacing: .08em; }
+.kick::before { content: ''; width: 8px; height: 8px; background: #FF5B1F; }
+
+.outline-text { color: transparent; -webkit-text-stroke: 1.5px #1A1C1E; }
+@media (min-width: 1024px) { .outline-text { -webkit-text-stroke-width: 2.5px; } }
+
+.rise { display: block; overflow: hidden; }
+.rise > span { display: inline-block; animation: rise .9s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+
+.dim { position: relative; height: 1px; background: #1A1C1E; }
+.dim::before, .dim::after { content: ''; position: absolute; top: -5px; width: 1px; height: 11px; background: #1A1C1E; }
+.dim::before { left: 0; } .dim::after { right: 0; }
+.dim-dark { background: #ECEAE5; } .dim-dark::before, .dim-dark::after { background: #ECEAE5; }
+.dim-grow { transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(.2,.8,.2,1) .3s; }
+.is-visible .dim-grow, .dim-grow.on { transform: scaleX(1); }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+.marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+.spec { position: relative; }
+.spec::before { content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 3px; background: #FF5B1F; transform: scaleX(0); transform-origin: left; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+@media (hover: hover) { .spec:hover::before { transform: scaleX(1); } }
+.cross { position: absolute; width: 10px; height: 10px; }
+.cross::before, .cross::after { content: ''; position: absolute; background: #FF5B1F; }
+.cross::before { left: 4px; top: 0; width: 2px; height: 10px; }
+.cross::after { top: 4px; left: 0; height: 2px; width: 10px; }
+
+.ba { touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: ew-resize; }
+.fade { animation: fade .4s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } }
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-i { transform: rotate(45deg); background: #FF5B1F; color: #fff; border-color: #FF5B1F; }
+
+.bar { background: rgba(236,234,229,.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+@media (max-width: 719px) { .bar { background: #ECEAE5; backdrop-filter: none; -webkit-backdrop-filter: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+  .marquee { animation: none; }
+}
