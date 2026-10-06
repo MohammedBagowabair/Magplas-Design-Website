@@ -10,7 +10,7 @@ export default {
         coal: '#111214',
         steel: '#5C6269',
         line: '#CFCAC1',
-        signal: { DEFAULT: '#FF5B1F', dark: '#D9430D' },
+        signal: { DEFAULT: '#FF5B1F', dark: '#D9430D', ink: '#AE3608' },
       },
       fontFamily: {
         sans: ['Archivo', 'system-ui', 'sans-serif'],

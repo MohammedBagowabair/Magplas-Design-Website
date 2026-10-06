@@ -13,7 +13,12 @@ export const gallery = [
 
 const en = {
   nav: { services: 'Services', process: 'Process', principles: 'Principles', work: 'Work', reviews: 'Reviews', contact: 'Contact' },
-  langLabel: 'BM', langAria: 'Tukar ke Bahasa Melayu', menu: 'Menu', close: 'Close',
+  meta: {
+    title: 'MAGPLAS Design | Interior Design, Renovation & Design-and-Build in Kuala Lumpur',
+    desc: 'MAGPLAS plans, designs and builds homes and commercial interiors in Kuala Lumpur, with site supervision, a clear work schedule and accurate estimates. Sunway Velocity, KL.',
+  },
+  langLabel: 'BM', langAria: 'BM, tukar ke Bahasa Melayu', menu: 'Menu', close: 'Close',
+  a11y: { main: 'Main', mobile: 'Mobile menu', skip: 'Skip to content', gallery: 'Illustrative interiors, scroll sideways', toTop: 'Back to top' },
   hero: {
     tag: 'Interior design · Renovation · Design & build',
     lines: ['Renovation,', 'measured', 'twice.'],
@@ -108,18 +113,24 @@ const en = {
     pitch: 'Website concept prepared for this studio. Not an official site yet — open to making it yours.',
     pitchLink: 'Talk to the designer',
     credit: 'Interior photos: Unsplash (illustrative).',
+    toTop: 'Back to top',
   },
 }
 export type Content = typeof en
 
 const ms: Content = {
-  nav: { services: 'Servis', process: 'Proses', principles: 'Prinsip', work: 'Projek', reviews: 'Ulasan', contact: 'Hubungi' },
-  langLabel: 'EN', langAria: 'Switch to English', menu: 'Menu', close: 'Tutup',
+  nav: { services: 'Perkhidmatan', process: 'Proses', principles: 'Prinsip', work: 'Projek', reviews: 'Ulasan', contact: 'Hubungi' },
+  meta: {
+    title: 'MAGPLAS Design | Reka Bentuk Dalaman, Renovasi & Reka-dan-Bina di Kuala Lumpur',
+    desc: 'MAGPLAS merancang, mereka bentuk dan membina rumah serta ruang komersial di Kuala Lumpur, dengan penyeliaan tapak, jadual kerja yang jelas dan anggaran yang tepat. Sunway Velocity, KL.',
+  },
+  langLabel: 'EN', langAria: 'EN, switch to English', menu: 'Menu', close: 'Tutup',
+  a11y: { main: 'Navigasi utama', mobile: 'Menu mudah alih', skip: 'Langkau ke kandungan', gallery: 'Contoh visual dalaman, tatal ke sisi', toTop: 'Kembali ke atas' },
   hero: {
     tag: 'Reka bentuk dalaman · Renovasi · Reka & bina',
     lines: ['Renovasi,', 'diukur', 'dua kali.'],
-    lead: 'MAGPLAS merancang, mereka bentuk dan membina rumah serta ruang komersial di Kuala Lumpur — dengan penyeliaan tapak, jadual kerja yang jelas dan anggaran yang boleh anda pegang.',
-    cta: 'Dapatkan sebut harga di WhatsApp',
+    lead: 'MAGPLAS merancang, mereka bentuk dan membina rumah serta ruang komersial di Kuala Lumpur — dengan penyeliaan tapak, jadual kerja yang jelas dan anggaran yang benar-benar boleh dipegang.',
+    cta: 'Dapatkan sebut harga',
     cta2: 'Cara kami bekerja',
     dimA: 'anggaran awal → bidaan akhir',
     dimB: 'penarafan Google · 9 ulasan',
@@ -127,13 +138,13 @@ const ms: Content = {
   },
   ticker: ['Reka bentuk dalaman', 'Renovasi', 'Reka & bina', 'Pengurusan projek', 'Penyeliaan tapak', 'Perundingan'],
   services: {
-    kicker: 'Servis',
+    kicker: 'Perkhidmatan',
     title: 'Satu pasukan dari lakaran pertama hingga semakan akhir.',
     items: [
       { code: 'S-01', t: 'Reka Bentuk Dalaman', d: 'Susun atur, kemasan dan butiran dirancang mengikut cara anda tinggal atau bekerja — dilukis dengan teliti sebelum apa-apa dibina.' },
       { code: 'S-02', t: 'Renovasi', d: 'Dari satu bilik hingga sebuah banglo, kami menguruskan semua tukang dan memastikan kerja tapak terus bergerak.' },
       { code: 'S-03', t: 'Reka & Bina', d: 'Reka bentuk dan pembinaan di bawah satu kontrak, supaya lukisan dan binaan sentiasa selari.' },
-      { code: 'S-04', t: 'Pengurusan Projek & Perundingan', d: 'Perancangan menyeluruh, penyeliaan tapak, koordinasi dan kawalan, disokong jadual kerja tapak yang lengkap.' },
+      { code: 'S-04', t: 'Pengurusan Projek & Perundingan', d: 'Perancangan menyeluruh, penyeliaan tapak, penyelarasan dan kawalan, disokong jadual kerja tapak yang lengkap.' },
     ],
   },
   slider: {
@@ -149,10 +160,10 @@ const ms: Content = {
     title: 'Lima peringkat. Satu jadual. Tiada teka-teki.',
     steps: [
       { t: 'Taklimat & nasihat', d: 'Kami melawat, mendengar dan memberi nasihat profesional tentang apa yang mungkin untuk ruang dan bajet anda.', tag: 'Minggu 0' },
-      { t: 'Reka bentuk', d: 'Lukisan reka bentuk dalaman dibangunkan bersama anda sehingga setiap ruang selesai.', tag: 'Reka' },
+      { t: 'Reka bentuk', d: 'Lukisan reka bentuk dalaman dibangunkan bersama anda sehingga setiap ruang selesai.', tag: 'Reka bentuk' },
       { t: 'Rancang & anggar', d: 'Perancangan menyeluruh dengan jadual kerja tapak yang lengkap dan anggaran yang teliti.', tag: 'Rancang' },
-      { t: 'Bina & selia', d: 'Penyeliaan, koordinasi dan kawalan setiap kerja di tapak — kemajuan yang boleh anda ikuti.', tag: 'Tapak' },
-      { t: 'Serahan & khidmat lepas', d: 'Semakan akhir bersama. Dan kami bertanggungjawab atas kerja kami, dalam atau luar tempoh waranti.', tag: 'Kunci' },
+      { t: 'Bina & selia', d: 'Penyeliaan, penyelarasan dan kawalan setiap kerja di tapak — kemajuan yang boleh anda ikuti.', tag: 'Tapak' },
+      { t: 'Serahan & khidmat selepas', d: 'Semakan akhir bersama. Dan kami bertanggungjawab atas kerja kami, dalam atau luar tempoh waranti.', tag: 'Kunci' },
     ],
   },
   principles: {
@@ -160,7 +171,7 @@ const ms: Content = {
     title: 'Tiga janji yang menjadi ukuran kami.',
     items: [
       { k: '<1%', t: 'Ketepatan', d: 'Purata perbezaan antara anggaran bajet awal dan bidaan akhir — purata industri sekitar 3%.' },
-      { k: '24/7', t: 'Akauntabiliti', d: 'Kami bertanggungjawab atas kerja kami, dalam atau luar waranti. Seorang pemilik rumah menghargai “masa dan komitmen 24/7” Terence dan Abbie.' },
+      { k: '24/7', t: 'Akauntabiliti', d: 'Kami bertanggungjawab atas kerja kami, dalam atau luar tempoh waranti. Seorang pemilik rumah menghargai “masa dan komitmen 24/7” Terence dan Abbie.' },
       { k: 'Lagi.', t: 'Konsistensi', d: 'Pelanggan berulang dan hubungan lama dengan subkontraktor mengekalkan kualiti dari satu projek ke projek seterusnya.' },
     ],
   },
@@ -181,9 +192,9 @@ const ms: Content = {
     sub: 'Daripada 9 ulasan',
     items: [
       { q: 'Rumah kami bertukar menjadi rupa moden yang sangat cantik, seperti yang diingini. Projek diurus dengan baik dan renovasi siap dalam tempoh yang dirancang.', a: 'Pemilik rumah · renovasi rumah baharu' },
-      { q: 'Sangat gembira dengan servis pasukan Magplas. Teliti dan responsif terhadap isu serta maklum balas. Sangat disyorkan.', a: 'Ulasan Google' },
-      { q: 'Firma ID yang boleh diharap dan kreatif. Amanah, dengan servis yang baik.', a: 'Ulasan Google' },
-      { q: 'Servis, nasihat dan mutu kerja yang baik.', a: 'Ulasan Google' },
+      { q: 'Sangat gembira dengan perkhidmatan pasukan Magplas. Teliti dan responsif terhadap isu serta maklum balas. Sangat disyorkan.', a: 'Ulasan Google' },
+      { q: 'Firma reka bentuk dalaman (ID) yang boleh diharap dan kreatif. Amanah, dengan perkhidmatan yang baik.', a: 'Ulasan Google' },
+      { q: 'Perkhidmatan, nasihat dan mutu kerja yang baik.', a: 'Ulasan Google' },
     ],
     prev: 'Ulasan sebelumnya', next: 'Ulasan seterusnya',
   },
@@ -191,7 +202,7 @@ const ms: Content = {
     kicker: 'Soalan lazim', title: 'Sebelum anda menghubungi.',
     items: [
       ['Adakah anda mengambil kerja kediaman dan komersial?', 'Ya. Kerja kami merangkumi rumah seperti renovasi banglo serta ruang komersial seperti lobi lif.'],
-      ['Bolehkah anda menguruskan projek saya sahaja?', 'Boleh. Pengurusan projek & perundingan merangkumi perancangan, penyeliaan tapak, koordinasi dan jadual kerja tapak yang lengkap.'],
+      ['Bolehkah anda menguruskan projek saya sahaja?', 'Boleh. Pengurusan projek & perundingan merangkumi perancangan, penyeliaan tapak, penyelarasan dan jadual kerja tapak yang lengkap.'],
       ['Sejauh mana tepatnya anggaran anda?', 'Secara purata, anggaran bajet awal kami berada dalam lingkungan 1% daripada bidaan akhir.'],
       ['Apakah waktu pejabat anda?', 'Isnin hingga Jumaat, 9:00 pagi – 6:00 petang. Tutup pada hujung minggu.'],
       ['Di manakah pejabat anda?', 'VO3-02-01, Sunway Velocity Designer Office, Lingkaran Sunway Velocity, 55100 Kuala Lumpur.'],
@@ -209,6 +220,7 @@ const ms: Content = {
     pitch: 'Konsep laman web disediakan untuk studio ini. Bukan laman rasmi lagi — sedia dijadikan milik anda.',
     pitchLink: 'Hubungi pereka',
     credit: 'Foto dalaman: Unsplash (contoh visual).',
+    toTop: 'Kembali ke atas',
   },
 }
 export const content = { en, ms }
